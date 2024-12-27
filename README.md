@@ -1,2 +1,2 @@
 # learningbrickbybrick
-my steady stat to the developing world
+my steady start to the developing world
