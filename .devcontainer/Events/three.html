@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   /* setInterval(function(){
+        console.log("Hitesh",Date.now());
+    },1000)
+      
+      const sayDate=function(){
+        console.log("Hitesh",Date.now())
+      }
+      setInterval(sayDate,1000)
+       const intervalid= setInterval(sayDate,1000,"hi")
+     clearInterval(intervalid)*/
+
+     let intervalId;
+    
+       
+     const sayDate=function(str){
+        console.log(str,Date.now());
+       }
+
+      document.querySelector('#start').addEventListener('click',function(str){
+        if(!intervalId){
+
+              intervalId=setInterval(sayDate,1000,"hi") 
+              console.log("Interval Started with ID:",intervalId)
+         }
+        
+       
+      })
+      document.querySelector('#stop').addEventListener('click',function(str){
+          clearInterval(intervalId);
+          console.log("interval stopped for ID:",intervalId)
+          intervalId=null;
+      })
+      /* document.querySelector('#stop').addEventListener('click',function(str){
+       // clearTimeout(changeMe)
+        console.log("STOPPED")
+       })
+      */
+      
+    
+     
+</script>
+</html>
